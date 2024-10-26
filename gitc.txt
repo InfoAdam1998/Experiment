@@ -59,6 +59,10 @@ git rebase -i --root
 git rebase --abort
 
 -new branch-
-git branch Text
+git branch branchName
 git branch
-git switch Text
+git switch branchName
+git commit -a -m "updates"
+git merge -m "updates" branchName
+git branch -d branchName
+git switch -c UpdatedText
