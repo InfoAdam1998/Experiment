@@ -66,3 +66,5 @@ git commit -a -m "updates"
 git merge -m "updates" branchName
 git branch -d branchName
 git switch -c UpdatedText
+
+git push all
