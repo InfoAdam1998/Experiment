@@ -32,3 +32,5 @@ git add .
 git commit -m "my first commit"
 git diff
 git restore --staged file.txt,
+
+fuck
