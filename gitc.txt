@@ -1,70 +1,87 @@
-git has 3 stages
-- working files
-- staging
-- commit
+Git Basics and Configuration
+Stages in Git:
+Working files: Files you are actively working on.
+Staging: Files that have been added to the "staging area" and are ready for a commit.
+Commit: A snapshot of the files in the staging area, saved to the repository's history.
 
--git configure-
-git config --global user.name "Adam"
-git config --global user.email steve@gmal.com
-git config --global init.default branch main
-git config -h
+Configuration:
+git config --global user.name "Adam": Sets the global username for Git commits.
+git config --global user.email steve@gmal.com: Sets the global email for Git commits.
+git config --global init.defaultBranch main: Sets the default branch name to "main" for new repositories.
+git config -h: Displays the help documentation for the config command.
 
--initialize repository-
-cd c:/users/steve/desktop/projects
-git init
+Setting Up and Managing Files in Git
+Initialize Repository:
+cd c:/users/steve/desktop/projects: Navigate to your project directory.
+git init: Initializes a new Git repository in the current directory.
 
--Git status-
-git status
-git add filename.txt
-git rm --cached filename.text
-clear
+Check Status:
+git status: Shows the status of tracked and untracked files, indicating if they are staged, modified, or untracked.
 
--Ignore files-
-create a textile named .gitignore
-within the file add 
-# ignore all .txt files
-*.txt
+Adding and Removing Files:
+git add filename.txt: Adds a file to the staging area.
+git rm --cached filename.txt: Removes a file from the staging area (without deleting it from the working directory).
 
--track all files/adding to staging-
-git add .
+Clearing Terminal:
+clear: Clears the terminal screen (command varies by system).
+Ignoring Files
+Creating a .gitignore File:
+Create a .gitignore file to specify files Git should ignore.
+Inside .gitignore:
+# ignore all .txt files: Comment for context.
+*.txt: Ignore all .txt files.
 
--commit-
-git commit -m "my first commit"
-git diff
+Staging and Committing Changes
+Tracking All Files:
+git add .: Adds all modified and new files in the current directory to the staging area.
 
--back to working file-
-git restore --staged file.txt 
+Commit Changes:
+git commit -m "my first commit": Creates a commit with the message "my first commit".
+git diff: Shows differences between working files and staged changes.
 
--bypass staging-
-git commit -a -m "all updates"
+Restore to Working File:
+git restore --staged file.txt: Removes a file from the staging area without affecting the working directory version.
+Commit Directly Without Staging:
+git commit -a -m "all updates": Adds and commits all tracked files in a single step, bypassing the staging area.
+Removing, Renaming, and Viewing Changes
 
--remove files-
-git rm "file.txt"
+Removing Files:
+git rm "file.txt": Removes the specified file from both the staging area and the working directory.
 
--rename files-
-git mv "commands.txt" "gitc.txt
+Renaming Files:
+git mv "commands.txt" "gitc.txt": Renames commands.txt to gitc.txt.
 
--git log-
-git log 
-press q to quit
-git log --oneline
-git commit -m "new text" --amend
-git log -p
-git help log
-git rest "value"
+Viewing Log and Amendments:
+git log: Displays the commit history.
+Press q to quit the log view.
+git log --oneline: Shows a concise, single-line view of the commit history.
+git commit -m "new text" --amend: Edits the message of the latest commit.
+git log -p: Shows differences for each commit.
+git help log: Opens the help documentation for git log.
 
-git rebase -i --root
-:x and enter to quit
-:ESC qw enter
-git rebase --abort
+Reset and Rebase:
+git reset "value": Resets the repository to a specified commit or state.
+git rebase -i --root: Interactive rebase from the root commit (useful for history rewriting).
+:x to quit, :ESC qw to save and quit.
+git rebase --abort: Cancels an ongoing rebase.
+Branching and Merging
+Creating and Managing Branches:
+git branch branchName: Creates a new branch called branchName.
+git branch: Lists all branches.
+git switch branchName: Switches to the specified branch.
+git commit -a -m "updates": Commits all tracked files with the message "updates".
+git merge -m "updates" branchName: Merges branchName into the current branch with the commit message "updates".
+git branch -d branchName: Deletes the specified branch.
+git switch -c UpdatedText: Creates and switches to a new branch called UpdatedText.
 
--new branch-
-git branch branchName
-git branch
-git switch branchName
-git commit -a -m "updates"
-git merge -m "updates" branchName
-git branch -d branchName
-git switch -c UpdatedText
 
-git push all
+Pushing, Fetching, and Pulling
+Push to Remote:
+git push all: Pushes all local branches to the remote repository.
+
+Fetch and Merge Changes:
+git fetch: Retrieves updates from the remote repository without merging.
+git merge: Merges fetched changes into the current branch.
+
+Pulling Changes:
+git pull: Combines fetch and merge to retrieve and integrate changes from the remote repository into the current branch.
