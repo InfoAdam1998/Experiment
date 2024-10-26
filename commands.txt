@@ -40,3 +40,6 @@ git commit -a -m "all updates"
 
 -remove files-
 git rm "file.txt"
+
+-rename files-
+git mv "commands.txt" "gitc.txt
