@@ -31,6 +31,7 @@ git add .
 -commit-
 git commit -m "my first commit"
 git diff
-git restore --staged file.txt,
 
-i wanna have sex with fotini goula
+-back to working file-
+git restore --staged file.txt 
+
