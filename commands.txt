@@ -35,3 +35,8 @@ git diff
 -back to working file-
 git restore --staged file.txt 
 
+-bypass staging-
+git commit -a -m "all updates"
+
+-remove files-
+git rm "file.txt"
